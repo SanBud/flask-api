@@ -19,7 +19,7 @@ jobs:
         with:
           logout: true
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}        
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
       - name: Docker build and later push
         uses: docker/build-push-action@v4
         with:
