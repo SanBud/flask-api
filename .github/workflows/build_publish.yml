@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Docker build and later push
-      - uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v3
         with:
           context: .
           file: Dockerfile
