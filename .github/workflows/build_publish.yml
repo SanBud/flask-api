@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   build_docker_image:
-    name: Build docker image and check any error TODO'Push later after the build'
+    name: Build docker image and check any error and Push later after the build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
           logout: true
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
-      - name: Docker build and later push
+      - name: Docker build and push
         uses: docker/build-push-action@v4
         with:
           file: Dockerfile
