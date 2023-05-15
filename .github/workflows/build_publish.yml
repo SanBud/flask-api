@@ -21,3 +21,5 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
           push: false
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v3
